@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Tooltip,
@@ -10,7 +11,16 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import Link from "next/link";
-import { Package2, PanelLeft, Settings } from "lucide-react";
+import { Package2, PanelLeft, Settings, LogOut } from "lucide-react";
+
+const handleLogout = () => {
+  document.cookie.split(";").forEach((c) => {
+    document.cookie = c
+      .replace(/^ +/, "")
+      .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+  });
+  window.location.href = "/";
+};
 
 export const AppLayout: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -52,6 +62,21 @@ export const AppLayout: React.FC<{ children: React.ReactNode }> = ({
               </Link>
             </TooltipTrigger>
             <TooltipContent side="right">Settings</TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href="#"
+                onClick={handleLogout}
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+              >
+                <LogOut className="h-5 w-5" />
+                <span className="sr-only">Logout</span>
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent side="right">Logout</TooltipContent>
           </Tooltip>
         </TooltipProvider>
       </nav>

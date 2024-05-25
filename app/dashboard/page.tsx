@@ -9,6 +9,8 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/components/app-layout";
+import Assestments from "@/components/assestments";
+import Idioms from "@/components/idioms";
 
 export default function DashboardPage() {
   return (
@@ -24,37 +26,11 @@ export default function DashboardPage() {
             </TabsList>
           </div>
           <TabsContent value="assestments">
-            <Card x-chunk="dashboard-06-chunk-0">
-              <CardHeader>
-                <CardTitle> Assestments </CardTitle>
-                <CardDescription>
-                  Manage your assestments here to customize your experience
-                </CardDescription>
-              </CardHeader>
-              <CardContent></CardContent>
-              <CardFooter>
-                <div className="text-xs text-muted-foreground">
-                  SCHOLA playground
-                </div>
-              </CardFooter>
-            </Card>
+            <Assestments />
           </TabsContent>
 
           <TabsContent value="idioms">
-            <Card x-chunk="dashboard-06-chunk-0">
-              <CardHeader>
-                <CardTitle> Idioms </CardTitle>
-                <CardDescription>
-                  Manage your idioms here to customize your experience
-                </CardDescription>
-              </CardHeader>
-              <CardContent></CardContent>
-              <CardFooter>
-                <div className="text-xs text-muted-foreground">
-                  SCHOLA playground
-                </div>
-              </CardFooter>
-            </Card>
+            <Idioms />
           </TabsContent>
         </Tabs>
       </main>
