@@ -26,11 +26,10 @@ export default function RootLayout({
       <body className={cn("min-h-screen font-sans", fontSans.variable)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          <ModeToggle />
           {children}
         </ThemeProvider>
       </body>
