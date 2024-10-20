@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   const handleLogin = () => {
-    if (email === "teamcredentials@schola.com" && password === "12345") {
+    if (email === "teamcredentials@koloni.com" && password === "12345") {
       setCookie("auth_token", "fakeAuthToken123", 7);
 
       router.push("/dashboard");

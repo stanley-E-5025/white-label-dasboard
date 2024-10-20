@@ -7,13 +7,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default function Idioms() {
+export default function Editor() {
   return (
     <Card x-chunk="dashboard-06-chunk-0">
       <CardHeader>
-        <CardTitle> Idioms </CardTitle>
+        <CardTitle> Template Editor </CardTitle>
         <CardDescription>
-          Manage your idioms here to customize your experience
+          Create and edit templates for notifications
         </CardDescription>
       </CardHeader>
       <CardContent></CardContent>

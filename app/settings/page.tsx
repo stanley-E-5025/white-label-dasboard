@@ -34,7 +34,7 @@ export default function SettingsPage() {
               <CardContent></CardContent>
               <CardFooter>
                 <div className="text-xs text-muted-foreground">
-                  SCHOLA playground
+                  Koloni playground
                 </div>
               </CardFooter>
             </Card>
@@ -52,7 +52,7 @@ export default function SettingsPage() {
               <CardContent></CardContent>
               <CardFooter>
                 <div className="text-xs text-muted-foreground">
-                  SCHOLA playground
+                  Koloni playground
                 </div>
               </CardFooter>
             </Card>

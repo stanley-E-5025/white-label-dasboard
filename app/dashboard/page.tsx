@@ -1,36 +1,26 @@
 import * as React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/components/app-layout";
-import Assestments from "@/components/assestments";
-import Idioms from "@/components/idioms";
+import Notifications from "@/components/notifications";
+import Editor from "@/components/editor";
 
 export default function DashboardPage() {
   return (
     <AppLayout>
       <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
-        <Tabs defaultValue="assestments">
+        <Tabs defaultValue="notifications">
           <div className="flex items-center">
             <TabsList>
-              <TabsTrigger value="assestments">Assestments</TabsTrigger>
-              <TabsTrigger value="idioms" className="hidden sm:flex">
-                Idioms
-              </TabsTrigger>
+              <TabsTrigger value="notifications">Notifications</TabsTrigger>
+              <TabsTrigger value="editor">Editor</TabsTrigger>
             </TabsList>
           </div>
-          <TabsContent value="assestments">
-            <Assestments />
+          <TabsContent value="notifications">
+            <Notifications />
           </TabsContent>
 
-          <TabsContent value="idioms">
-            <Idioms />
+          <TabsContent value="editor">
+            <Editor />
           </TabsContent>
         </Tabs>
       </main>

@@ -41,7 +41,7 @@ export default function Assessments() {
         </div>
       </CardContent>
       <CardFooter>
-        <div className="text-xs text-muted-foreground">SCHOLA playground</div>
+        <div className="text-xs text-muted-foreground">Koloni playground</div>
       </CardFooter>
     </Card>
   );
